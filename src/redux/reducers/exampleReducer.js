@@ -2,9 +2,9 @@ import {
   LIST_SUCCESS,
   LIST_REQUEST,
   LIST_FAIL,
-} from "../../constants/reduxConstants/exampleConstant";
+} from '@constants/reduxConstants/exampleConstant';
 
-const INITIAL_STATE = { quote: "", loading: false, error: "" };
+const INITIAL_STATE = { quote: '', loading: false, error: '' };
 
 export const exampleReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
