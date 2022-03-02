@@ -1,5 +1,6 @@
 export default {
   ROOT: "ROOT",
+  TAB: "TAB",
   EXAMPLE: "EXAMPLE",
   APP_EXAMPLE: "APP_EXAMPLE",
   AUTH_EXAMPLE: "AUTH_EXAMPLE",

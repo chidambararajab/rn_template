@@ -19,7 +19,6 @@ function RootStackScreen(params) {
         headerShown: false,
       }}
     >
-      {/* <RootStack.Screen name={"Tabs"} component={Tabs} /> */}
       <RootStack.Screen name={NAVIGATION_CONSTANTS.ROOT} component={Root} />
     </RootStack.Navigator>
   );
@@ -32,6 +31,7 @@ function AuthStackScreen(params) {
         headerShown: false,
       }}
     >
+      <AuthStack.Screen name={NAVIGATION_CONSTANTS.TAB} component={Tabs} />
       <AuthStack.Screen
         name={NAVIGATION_CONSTANTS.AUTH_EXAMPLE}
         component={AuthExample}
@@ -47,7 +47,7 @@ function AppStackScreen(params) {
         headerShown: false,
       }}
     >
-      <AppStack.Screen name={"Tabs"} component={Tabs} />
+      <AppStack.Screen name={NAVIGATION_CONSTANTS.TAB} component={Tabs} />
       <AppStack.Screen
         name={NAVIGATION_CONSTANTS.EXAMPLE}
         component={Example}

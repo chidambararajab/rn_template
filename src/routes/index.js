@@ -51,13 +51,12 @@ export default function Navigation(params) {
   return (
     <AuthContext.Provider value={authContext}>
       <NavigationContainer ref={navigationRef}>
-        {/* {currentStack === "" ? (
-          <RootStackScreen />
-        ) : currentStack === "auth" ? (
-          <AuthStackScreen />
-        ) : ( */}
-        <AppStackScreen />
-        {/* )} */}
+        {
+          // currentStack === "" ? (
+          //   <RootStackScreen />
+          // ) :
+          currentStack === "auth" ? <AuthStackScreen /> : <AppStackScreen />
+        }
       </NavigationContainer>
     </AuthContext.Provider>
   );
