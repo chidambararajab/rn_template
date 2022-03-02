@@ -1,5 +1,3 @@
-import Loader from "@src/components/Essentials/Loader";
-Dimensions;
 import React, { useEffect } from "react";
 import {
   StyleSheet,
@@ -10,6 +8,7 @@ import {
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 
+import Loader from "@components/Essentials/Loader";
 import { exampleAction } from "../redux/actions/exampleAction";
 import { COLORS } from "../theme";
 

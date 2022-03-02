@@ -1,21 +1,17 @@
-import axios from 'axios';
-import {
-  LIST_SUCCESS,
-  LIST_REQUEST,
-  LIST_FAIL,
-} from '@constants/reduxConstants/exampleConstant';
+import axios from "axios";
+import { REDUX_CONSTANTS } from "@constants";
 
 export const exampleAction = () => async (dispatch) => {
   try {
-    dispatch({ type: LIST_REQUEST });
+    dispatch({ type: REDUX_CONSTANTS.EXAMPLE.LIST_REQUEST });
 
     const { data } = await axios.get(
-      'https://breaking-bad-quotes.herokuapp.com/v1/quotes'
+      "https://breaking-bad-quotes.herokuapp.com/v1/quotes"
     );
-    dispatch({ type: LIST_SUCCESS, payload: data });
+    dispatch({ type: REDUX_CONSTANTS.EXAMPLE.LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
-      type: LIST_FAIL,
+      type: REDUX_CONSTANTS.EXAMPLE.LIST_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
