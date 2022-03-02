@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 
 import store from "@redux/store/store";
 import Example from "@screens/example";
+import Navigation from "@routes";
 
 const App = () => {
   useEffect(() => {
@@ -15,7 +16,8 @@ const App = () => {
       <Provider store={store}>
         <View style={Styles.container}>
           <StatusBar backgroundColor="#f7f7f7" barStyle="dark-content" />
-          <Example />
+          {/* <Example /> */}
+          <Navigation />
         </View>
       </Provider>
     </SafeAreaView>
@@ -26,8 +28,6 @@ const Styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "red",
-    justifyContent: "center",
-    alignItems: "center",
   },
   text: { color: "#070707" },
 });

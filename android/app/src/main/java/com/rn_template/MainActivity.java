@@ -2,6 +2,10 @@ package com.rn_template;
 
 import com.facebook.react.ReactActivity;
 
+//NAVIGARION
+import android.os.Bundle;
+//NAVIGATION
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -12,4 +16,11 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "rn_template";
   }
+
+//NAVIGARION
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+//NAVIGARION
 }

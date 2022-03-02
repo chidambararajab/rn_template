@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AuthContext } from "../../navigation/context";
+import { AuthContext } from "@routes/context";
 import Loader from "@components/Essentials/Loader";
 
 export default function Root() {
