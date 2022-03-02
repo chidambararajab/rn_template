@@ -9,7 +9,7 @@ export const size = {
 
 export const lineHeight = {
   small: 10,
-  medium: 15,
-  large: 18,
-  extraLarge: 20,
+  medium: 14,
+  large: 16,
+  extraLarge: 18,
 };

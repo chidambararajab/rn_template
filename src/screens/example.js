@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import Loader from "@src/components/Essentials/Loader";
+Dimensions;
+import React, { useEffect } from "react";
 import {
   StyleSheet,
   View,
   Text,
-  Button,
   TouchableOpacity,
-  TouchableHighlight,
+  Dimensions,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 
 import { exampleAction } from "../redux/actions/exampleAction";
 import { COLORS } from "../theme";
+
+const deviceWidth = Dimensions.get("window").width;
 
 const Example = () => {
   const dispatch = useDispatch();
@@ -26,11 +29,7 @@ const Example = () => {
   };
 
   if (loading) {
-    return (
-      <View style={Styles.container}>
-        <Text style={Styles.text}>Loading...</Text>
-      </View>
-    );
+    return <Loader />;
   }
 
   return (
@@ -53,7 +52,8 @@ const Example = () => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#c7c7c7",
+    width: deviceWidth,
+    backgroundColor: "#f7f7f7",
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 50,
