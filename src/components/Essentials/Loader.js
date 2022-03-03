@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Dimensions, StatusBar, StyleSheet } from "react-native";
+import { View, Image, Dimensions, StatusBar, StyleSheet } from "react-native";
+
+import { IMAGES } from "@theme/";
 
 const deviceWidth = Dimensions.get("window").width;
 const deviceHight = Dimensions.get("window").height;
@@ -32,7 +34,8 @@ const Loader = (props) => {
         backgroundColor={statusBar.backgroundColor}
         barStyle={statusBar.barStyle}
       />
-      <Text style={styles.message}>Loading...</Text>
+      {/* <Text style={styles.message}>Loading...</Text> */}
+      <Image source={IMAGES.GIF.loader} style={styles.gif} />
     </View>
   );
 };
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     zIndex: 2,
   },
+  gif: { height: 50, width: 50 },
   message: {
     color: "#070707",
     fontSize: 20,

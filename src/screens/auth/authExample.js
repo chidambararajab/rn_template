@@ -1,12 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+
+import Loader from "@components/Essentials/Loader";
 
 const AuthExample = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.message}>AUTH EXAMPLE</Text>
-    </View>
-  );
+  return <Loader />;
 };
 
 const styles = StyleSheet.create({
