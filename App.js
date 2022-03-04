@@ -4,7 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Provider } from "react-redux";
 
 import store from "@redux/store/store";
-import Example from "@screens/example";
 import Navigation from "@routes";
 
 const App = () => {
